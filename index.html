@@ -114,12 +114,14 @@ The dataset used in this study, the Breast Cancer Wisconsin (Diagnostic) dataset
 <p>
 However, the high dimensionality and correlation between features in the dataset can introduce redundancy and increase computational complexity. To address this, dimensionality reduction techniques such as Principal Component Analysis (PCA) are often applied. PCA transforms the original feature space into a smaller set of uncorrelated components while preserving most of the variance in the data, making it easier for machine learning models to learn efficiently.
 </p>
+<div class="float-image">
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/SARS-CoV-2_without_background.png"
                     alt="Biomedical Illustration">
 
                 <p class="caption">
                     Figure 1: Biomedical visualization of viral structure
                 </p>
+            </div>
 <p>
 This study aims to develop and compare multiple supervised machine learning models for breast cancer classification, including Logistic Regression, Random Forest, and Support Vector Machine (SVM). Each model represents a different learning strategy: linear classification, ensemble learning, and margin-based optimization. By comparing these models, we can better understand how different algorithms perform on biomedical datasets with complex feature structures.
 </p>
@@ -326,19 +328,39 @@ In medical diagnosis tasks, recall is considered particularly important because 
         </section>
 
         <!-- DISCUSSION -->
-        <section id="discussion">
 
-            <h2>Discussion</h2>
+<section id="discussion">
 
-            <p>
-                The results demonstrate that machine learning models can effectively classify breast cancer cases.
-            </p>
+<h2>Discussion</h2>
 
-            <p>
-                SVM achieved the highest performance due to its strong decision boundary optimization capabilities.
-            </p>
+<h3>Overview of Findings</h3>
 
-            <div class="float-image">
+<p>
+The results of this study demonstrate that machine learning algorithms can effectively classify breast cancer cases using structured biomedical data derived from cell nucleus measurements. Across all evaluated models—Logistic Regression, Random Forest, and Support Vector Machine (SVM)—the classification performance was consistently high, indicating that the dataset contains strong and distinguishable patterns between benign and malignant cases.
+</p>
+
+<p>
+The comparative analysis of models revealed that Support Vector Machine achieved the best overall performance, followed closely by Random Forest, while Logistic Regression served as a strong baseline model. These differences in performance reflect the underlying mathematical structure and learning capacity of each algorithm when applied to high-dimensional biomedical datasets.
+</p>
+
+---
+
+<h3>Interpretation of Model Performance</h3>
+
+<p>
+The superior performance of Support Vector Machine can be attributed to its ability to construct an optimal hyperplane that maximizes the margin between the two classes. In biomedical classification problems such as cancer detection, where class boundaries may be complex and non-linear, SVM is particularly effective due to its flexibility in handling high-dimensional feature spaces. The use of kernel-based transformations further enhances its ability to capture subtle relationships between features.
+</p>
+
+<p>
+Random Forest also demonstrated strong performance due to its ensemble learning structure. By combining multiple decision trees trained on different subsets of the data, Random Forest reduces overfitting and increases generalization ability. This is particularly useful in biomedical datasets, where small variations in data can significantly affect model predictions.
+</p>
+
+<p>
+Logistic Regression, while less complex, still achieved competitive results. This suggests that portions of the dataset exhibit linear separability, meaning that malignant and benign cases can partially be distinguished using linear decision boundaries. However, its lower performance compared to non-linear models indicates that the dataset also contains more complex relationships that require advanced modeling techniques.
+</p>
+
+---
+ <div class="float-image">
 
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxhCOvAAGiPtQOIJtjjdsPeyPWGhX4M8i5g&s"
                     alt="AI Biomedical Analysis">
@@ -346,58 +368,168 @@ In medical diagnosis tasks, recall is considered particularly important because 
                 <p class="caption">
                     Figure 3: Machine learning and biomedical analysis visualization
                 </p>
+<h3>Role of Feature Space and Biomedical Meaning</h3>
 
-            </div>
+<p>
+One of the most important aspects of this study is the nature of the input features. The dataset is composed of quantitative measurements extracted from digitized images of breast cell nuclei. Features such as radius, area, perimeter, concavity, and symmetry are not arbitrary numerical values—they represent biologically meaningful characteristics of cell structure.
+</p>
 
-            <p>
-                Random Forest also demonstrated strong performance through ensemble learning.
-            </p>
+<p>
+Malignant cells tend to exhibit irregular shapes, larger variation in size, and more irregular boundaries compared to benign cells. For example, higher concavity and irregular perimeter values are often associated with cancerous growth patterns. Machine learning models are able to detect these subtle variations across multiple dimensions simultaneously, which is extremely difficult to achieve through manual inspection alone.
+</p>
 
-            <p>
-                Logistic Regression provided a strong interpretable baseline model.
-            </p>
+<p>
+The strong correlations observed between several features (such as radius, perimeter, and area) suggest redundancy in the dataset. This justifies the use of dimensionality reduction techniques such as Principal Component Analysis (PCA), which helps compress the feature space while preserving the most important variance.
+</p>
 
-            <p>
-                PCA highlighted redundancy in the feature space while preserving predictive performance.
-            </p>
+---
 
-        </section>
+<h3>Impact of PCA on Model Understanding</h3>
+
+<p>
+Principal Component Analysis played a significant role in improving both computational efficiency and data interpretability. By transforming correlated features into orthogonal components, PCA reduces redundancy and simplifies the learning process for machine learning models.
+</p>
+
+<p>
+The PCA results showed that a relatively small number of principal components could explain a large portion of the variance in the dataset. This indicates that although the dataset contains 30 features, much of the underlying information is concentrated in a lower-dimensional structure.
+</p>
+
+<p>
+From a modeling perspective, PCA reduces noise and helps prevent overfitting, especially in algorithms sensitive to feature correlations. However, it also introduces a trade-off between interpretability and performance, since transformed components no longer directly correspond to original biological measurements.
+</p>
+
+---
+
+<h3>Medical Significance of Results</h3>
+
+<p>
+From a clinical standpoint, the findings of this study highlight the potential of machine learning as a supportive tool in breast cancer diagnosis. Early detection remains one of the most critical factors in improving survival rates, and automated systems can assist in reducing diagnostic delays and human variability.
+</p>
+
+<p>
+A key observation in this study is the importance of recall in medical classification tasks. False negatives—cases where malignant tumors are incorrectly classified as benign—pose a serious risk in healthcare settings. Therefore, models must prioritize sensitivity to ensure that potential cancer cases are not missed.
+</p>
+
+<p>
+The high ROC-AUC values achieved by the models indicate strong separability between classes, suggesting that machine learning systems can reliably distinguish between benign and malignant cases when trained on appropriate feature representations.
+</p>
+
+---
+
+<h3>Comparison with Real-World Clinical Scenarios</h3>
+
+<p>
+While the dataset used in this study is clean, structured, and well-labeled, real-world clinical data is often more complex. In practice, medical data may include noise, missing values, variations in imaging devices, and differences in clinical interpretation. These factors can significantly impact model performance when deployed outside controlled datasets.
+</p>
+
+<p>
+Despite these limitations, the strong performance achieved in this study demonstrates that the underlying biological patterns of cancerous and non-cancerous cells are learnable using machine learning techniques. This supports the idea that AI-based systems can serve as valuable decision-support tools in clinical environments.
+</p>
+
+---
+
+<h3>Limitations and Challenges</h3>
+
+<p>
+Several limitations should be acknowledged. First, the dataset size is relatively small, which may limit generalization to larger and more diverse populations. Second, the study focuses only on tabular features derived from images, rather than raw medical imaging data such as histopathology slides or MRI scans.
+</p>
+
+<p>
+Additionally, although PCA improves efficiency, it reduces interpretability, making it harder to directly relate model decisions to specific biological features. Finally, the study does not include deep learning models, which may capture more complex hierarchical patterns in larger datasets.
+</p>
+
+---
+
+<h3>Key Insight</h3>
+
+<p>
+Overall, the most important insight from this study is that structured biomedical measurements contain enough predictive information for highly accurate classification of breast cancer cases. When combined with appropriate preprocessing and machine learning models, this data can be transformed into powerful diagnostic tools that support medical decision-making.
+</p>
+
+</section>
 
         <!-- CONCLUSION -->
-        <section id="conclusion">
+<section id="conclusion">
 
-            <h2>Conclusion</h2>
+<h2>Conclusion</h2>
 
-            <div class="float-image">
+<h3>Summary of the Study</h3>
 
-                <img src="https://t4.ftcdn.net/jpg/01/23/93/29/360_F_123932972_Zjf03PEPrh8VCnzon7eya9127NfE6VrV.jpg"
-                    alt="AI Healthcare Illustration">
+<p>
+This study presented a machine learning-based approach for the classification of breast cancer using the Breast Cancer Wisconsin (Diagnostic) dataset. The primary objective was to investigate the effectiveness of different supervised learning algorithms in distinguishing between benign and malignant tumor cases using structured biomedical data derived from digitized cell measurements. By combining data preprocessing techniques, dimensionality reduction, and multiple classification models, the study established a complete end-to-end pipeline for biomedical prediction tasks.
+</p>
 
-                <p class="caption">
-                    Figure 4: Artificial intelligence and biomedical healthcare systems
-                </p>
+<p>
+The dataset consisted of 30 numerical features representing morphological characteristics of cell nuclei, including measurements such as radius, texture, perimeter, area, smoothness, compactness, concavity, and symmetry. These features provide important biological information that reflects differences between normal and cancerous cell structures. The use of such features allows machine learning models to learn patterns associated with malignancy in a quantitative and data-driven manner.
+</p>
 
-            </div>
+---
 
-            <p>
-                This study demonstrated the effectiveness of machine learning techniques for breast cancer classification.
-            </p>
+<h3>Key Findings</h3>
 
-            <p>
-                SVM showed the strongest overall performance, followed closely by Random Forest.
-            </p>
+<p>
+The experimental results demonstrated that all three machine learning models—Logistic Regression, Random Forest, and Support Vector Machine (SVM)—achieved strong classification performance. However, differences in performance were observed due to the underlying learning mechanisms of each model.
+</p>
 
-            <p>
-                PCA improved efficiency while preserving classification accuracy.
-            </p>
+<p>
+Support Vector Machine consistently achieved the highest performance across evaluation metrics, particularly in terms of accuracy and ROC-AUC score. This indicates that the dataset exhibits a decision boundary that is effectively captured by margin-based classification methods. Random Forest also performed strongly, benefiting from its ensemble structure that reduces variance and improves generalization by combining multiple decision trees. Logistic Regression, while simpler and linear in nature, still produced competitive results, demonstrating that part of the dataset is linearly separable.
+</p>
 
-            <h3>Future Work</h3>
+<p>
+Additionally, the application of Principal Component Analysis (PCA) confirmed that a significant portion of the dataset’s variance could be retained using a reduced number of components. This reduction in dimensionality not only improved computational efficiency but also reduced feature redundancy, which is common in biomedical datasets where multiple measurements are highly correlated.
+</p>
 
-            <p>
-                Future research may explore deep learning methods and larger biomedical datasets.
-            </p>
+---
 
-        </section>
+<h3>Medical and Practical Implications</h3>
+
+<p>
+From a biomedical perspective, the results of this study highlight the potential of machine learning models as supportive tools in clinical decision-making. Early detection of breast cancer is critical, as it significantly increases treatment success rates and patient survival outcomes. The ability of machine learning models to classify tumors accurately based on quantitative features suggests that such systems could assist healthcare professionals in making faster and more consistent diagnostic decisions.
+</p>
+
+<p>
+A particularly important aspect of this study is the emphasis on minimizing false negatives. In medical diagnosis, a false negative (failing to detect a malignant tumor) can have severe consequences, potentially delaying treatment and worsening patient outcomes. Therefore, evaluation metrics such as recall and ROC-AUC are more critical than accuracy alone in assessing model performance in this context.
+</p>
+
+---
+
+<h3>Limitations of the Study</h3>
+
+<p>
+Despite the strong performance of the models, several limitations should be acknowledged. First, the dataset used is relatively small and highly structured, which may not fully represent the complexity of real-world clinical environments. In real medical settings, data can be noisy, incomplete, and affected by variability in imaging equipment and human interpretation.
+</p>
+
+<p>
+Second, the study focuses only on traditional machine learning algorithms and does not include deep learning approaches, which may capture more complex patterns in large-scale medical imaging datasets. Additionally, while PCA improves efficiency, it reduces interpretability by transforming original features into abstract components.
+</p>
+
+---
+
+<h3>Future Work</h3>
+
+<p>
+Future research can extend this work in several important directions. One potential improvement is the integration of deep learning models, such as neural networks and convolutional neural networks (CNNs), which may provide improved performance on larger and more complex biomedical datasets. These models are capable of automatically learning hierarchical feature representations from raw data.
+</p>
+
+<p>
+Another direction involves the use of larger and more diverse datasets collected from multiple medical institutions to improve model generalization and robustness. Additionally, advanced feature selection techniques and hybrid models combining statistical and deep learning methods could further enhance classification performance.
+</p>
+
+<p>
+Finally, deploying such models into real-world clinical decision support systems would be an important step toward practical application. This would require further validation, regulatory considerations, and integration with hospital information systems to ensure safe and effective use in medical environments.
+</p>
+
+---
+
+<h3>Final Statement</h3>
+
+<p>
+In conclusion, this study demonstrates that machine learning techniques, when combined with appropriate preprocessing and feature engineering strategies, can achieve high performance in biomedical classification tasks such as breast cancer detection. The results highlight the potential of artificial intelligence to assist in medical diagnostics and support early detection systems. While not intended to replace clinical expertise, such models can serve as powerful decision-support tools that enhance accuracy, efficiency, and consistency in healthcare diagnosis.
+</p>
+
+
+
+</section>
 
         <!-- REFERENCES -->
         <section id="references">
