@@ -147,7 +147,7 @@ The primary objective of this research is to evaluate how effectively machine le
 This study follows a structured machine learning pipeline designed for biomedical classification of breast cancer using structured tabular data. The overall methodology consists of five main stages: dataset acquisition, data preprocessing, feature scaling and normalization, dimensionality reduction using Principal Component Analysis (PCA), model training using supervised learning algorithms, and final performance evaluation using multiple classification metrics. Each stage is designed to improve model stability, reduce overfitting, and ensure reliable prediction performance in a medical diagnostic context.
 </p>
 
----
+
 
 <h3>Dataset Description</h3>
 
@@ -176,7 +176,7 @@ Each sample contains 30 numerical features computed from digitized microscopic i
 These features are computed as mean, standard error, and worst-case values for each measurement type, resulting in a high-dimensional feature space that captures both central tendencies and variability of tumor cell structures.
 </p>
 
----
+
 
 <h3>Data Preprocessing</h3>
 
@@ -192,7 +192,7 @@ The target variable was encoded into binary form, where malignant cases were lab
 After encoding, the dataset was split into training and testing sets using a stratified sampling approach. Stratification ensures that both training and testing sets maintain the same proportion of benign and malignant cases, which is critical for unbiased evaluation in medical classification problems.
 </p>
 
----
+
 
 <h3>Feature Scaling and Normalization</h3>
 
@@ -204,7 +204,7 @@ Since the dataset contains features with different units and magnitude ranges (f
 This step is essential for distance-based algorithms such as Support Vector Machines and Logistic Regression, as it prevents features with larger numerical ranges from dominating the learning process. Without scaling, model performance may become biased toward high-magnitude variables.
 </p>
 
----
+
 
 <h3>Dimensionality Reduction using PCA</h3>
 
@@ -227,7 +227,7 @@ The primary objective of PCA in this study is to:
 The principal components were ranked based on explained variance, and only the most significant components were retained for model training. This ensures that the transformed dataset maintains most of the original informational content while being significantly more compact.
 </p>
 
----
+
 
 <h3>Machine Learning Models</h3>
 
@@ -250,7 +250,7 @@ Random Forest is an ensemble learning method that constructs multiple decision t
 Support Vector Machine is a powerful classification algorithm that finds the optimal hyperplane that maximizes the margin between different classes. In this study, SVM is used due to its strong performance in high-dimensional feature spaces and its ability to handle complex decision boundaries. Kernel functions may also be applied to capture non-linear relationships in the data.
 </p>
 
----
+
 
 <h3>Model Training Procedure</h3>
 
@@ -262,7 +262,7 @@ Each model was trained using the preprocessed dataset after scaling and dimensio
 Cross-validation techniques were implicitly considered to ensure that model performance is not dependent on a single random split of the dataset. This improves the reliability and robustness of evaluation results.
 </p>
 
----
+
 <div class="float-image">
 
                 <img src="https://t4.ftcdn.net/jpg/01/23/93/29/360_F_123932972_Zjf03PEPrh8VCnzon7eya9127NfE6VrV.jpg"
@@ -343,7 +343,7 @@ The results of this study demonstrate that machine learning algorithms can effec
 The comparative analysis of models revealed that Support Vector Machine achieved the best overall performance, followed closely by Random Forest, while Logistic Regression served as a strong baseline model. These differences in performance reflect the underlying mathematical structure and learning capacity of each algorithm when applied to high-dimensional biomedical datasets.
 </p>
 
----
+
 
 <h3>Interpretation of Model Performance</h3>
 
@@ -359,7 +359,7 @@ Random Forest also demonstrated strong performance due to its ensemble learning 
 Logistic Regression, while less complex, still achieved competitive results. This suggests that portions of the dataset exhibit linear separability, meaning that malignant and benign cases can partially be distinguished using linear decision boundaries. However, its lower performance compared to non-linear models indicates that the dataset also contains more complex relationships that require advanced modeling techniques.
 </p>
 
----
+
  <div class="float-image">
 
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxhCOvAAGiPtQOIJtjjdsPeyPWGhX4M8i5g&s"
@@ -382,7 +382,7 @@ Malignant cells tend to exhibit irregular shapes, larger variation in size, and 
 The strong correlations observed between several features (such as radius, perimeter, and area) suggest redundancy in the dataset. This justifies the use of dimensionality reduction techniques such as Principal Component Analysis (PCA), which helps compress the feature space while preserving the most important variance.
 </p>
 
----
+
 
 <h3>Impact of PCA on Model Understanding</h3>
 
@@ -398,7 +398,7 @@ The PCA results showed that a relatively small number of principal components co
 From a modeling perspective, PCA reduces noise and helps prevent overfitting, especially in algorithms sensitive to feature correlations. However, it also introduces a trade-off between interpretability and performance, since transformed components no longer directly correspond to original biological measurements.
 </p>
 
----
+
 
 <h3>Medical Significance of Results</h3>
 
@@ -414,7 +414,7 @@ A key observation in this study is the importance of recall in medical classific
 The high ROC-AUC values achieved by the models indicate strong separability between classes, suggesting that machine learning systems can reliably distinguish between benign and malignant cases when trained on appropriate feature representations.
 </p>
 
----
+
 
 <h3>Comparison with Real-World Clinical Scenarios</h3>
 
@@ -426,7 +426,7 @@ While the dataset used in this study is clean, structured, and well-labeled, rea
 Despite these limitations, the strong performance achieved in this study demonstrates that the underlying biological patterns of cancerous and non-cancerous cells are learnable using machine learning techniques. This supports the idea that AI-based systems can serve as valuable decision-support tools in clinical environments.
 </p>
 
----
+
 
 <h3>Limitations and Challenges</h3>
 
@@ -438,8 +438,7 @@ Several limitations should be acknowledged. First, the dataset size is relativel
 Additionally, although PCA improves efficiency, it reduces interpretability, making it harder to directly relate model decisions to specific biological features. Finally, the study does not include deep learning models, which may capture more complex hierarchical patterns in larger datasets.
 </p>
 
----
-
+ 
 <h3>Key Insight</h3>
 
 <p>
@@ -463,7 +462,7 @@ This study presented a machine learning-based approach for the classification of
 The dataset consisted of 30 numerical features representing morphological characteristics of cell nuclei, including measurements such as radius, texture, perimeter, area, smoothness, compactness, concavity, and symmetry. These features provide important biological information that reflects differences between normal and cancerous cell structures. The use of such features allows machine learning models to learn patterns associated with malignancy in a quantitative and data-driven manner.
 </p>
 
----
+
 
 <h3>Key Findings</h3>
 
@@ -479,7 +478,7 @@ Support Vector Machine consistently achieved the highest performance across eval
 Additionally, the application of Principal Component Analysis (PCA) confirmed that a significant portion of the dataset’s variance could be retained using a reduced number of components. This reduction in dimensionality not only improved computational efficiency but also reduced feature redundancy, which is common in biomedical datasets where multiple measurements are highly correlated.
 </p>
 
----
+
 
 <h3>Medical and Practical Implications</h3>
 
@@ -491,7 +490,7 @@ From a biomedical perspective, the results of this study highlight the potential
 A particularly important aspect of this study is the emphasis on minimizing false negatives. In medical diagnosis, a false negative (failing to detect a malignant tumor) can have severe consequences, potentially delaying treatment and worsening patient outcomes. Therefore, evaluation metrics such as recall and ROC-AUC are more critical than accuracy alone in assessing model performance in this context.
 </p>
 
----
+
 
 <h3>Limitations of the Study</h3>
 
@@ -503,7 +502,7 @@ Despite the strong performance of the models, several limitations should be ackn
 Second, the study focuses only on traditional machine learning algorithms and does not include deep learning approaches, which may capture more complex patterns in large-scale medical imaging datasets. Additionally, while PCA improves efficiency, it reduces interpretability by transforming original features into abstract components.
 </p>
 
----
+
 
 <h3>Future Work</h3>
 
@@ -519,7 +518,7 @@ Another direction involves the use of larger and more diverse datasets collected
 Finally, deploying such models into real-world clinical decision support systems would be an important step toward practical application. This would require further validation, regulatory considerations, and integration with hospital information systems to ensure safe and effective use in medical environments.
 </p>
 
----
+
 
 <h3>Final Statement</h3>
 
