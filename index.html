@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Computational Biomedicine Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <h2>🧬 Research Paper</h2>
+
+        <nav>
+    <a href="#title">Title</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#introduction">Introduction</a>
+    <a href="#methods">Methods</a>
+    <a href="#results">Results</a>
+    <a href="#discussion">Discussion</a>
+    <a href="#conclusion">Conclusion</a>
+    <a href="#references">References</a>
+</nav>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- TITLE -->
+        <section id="title" class="active">
+
+            <div class="title-container">
+
+                <h1>
+                    Machine Learning-Based Biomedical Cancer Classification Using Feature Reduction and Ensemble Models
+                </h1>
+
+                <p class="subtitle">
+                    Computational Biomedicine Research Study
+                </p>
+
+                <p class="authors">
+                    Author: Mohammad Chamaa
+                </p>
+
+                <p class="affiliation">
+                    Computational Biomedicine Study Laboratory
+                </p>
+
+                <p class="meta">
+                    Dataset: Breast Cancer Wisconsin (Diagnostic)
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ABSTRACT -->
+        <section id="abstract">
+
+            <h2>Abstract</h2>
+
+            <p>
+                Breast cancer diagnosis remains a critical challenge in modern healthcare, where early and accurate detection
+                significantly improves patient outcomes and survival rates.
+            </p>
+
+            <p>
+                In this study, machine learning techniques were applied for automated breast cancer classification using
+                the Breast Cancer Wisconsin (Diagnostic) dataset.
+            </p>
+
+            <p>
+                Principal Component Analysis (PCA) was used to reduce dimensionality while preserving the majority of
+                dataset variance.
+            </p>
+
+            <p>
+                Logistic Regression, Random Forest, and Support Vector Machine (SVM) models were implemented and evaluated
+                using accuracy, precision, recall, F1-score, and ROC-AUC.
+            </p>
+
+            <p>
+                Results demonstrated strong predictive performance across all models, with SVM achieving the highest
+                overall performance.
+            </p>
+
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section id="introduction">
+
+            <h2>Introduction</h2>
+
+            <p>
+                Breast cancer is one of the most prevalent and life-threatening diseases affecting women worldwide.
+            </p>
+
+            <p>
+                Traditional diagnostic approaches rely heavily on clinical expertise and medical imaging analysis.
+            </p>
+
+            <div class="float-image">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/SARS-CoV-2_without_background.png"
+                    alt="Biomedical Illustration">
+
+                <p class="caption">
+                    Figure 1: Biomedical visualization of viral structure
+                </p>
+
+            </div>
+
+            <p>
+                Machine learning has emerged as a powerful tool in biomedical informatics, enabling automated
+                pattern recognition and predictive modeling.
+            </p>
+
+            <p>
+                The Breast Cancer Wisconsin dataset provides a benchmark for evaluating machine learning methods
+                in cancer classification tasks.
+            </p>
+
+            <p>
+                This study aims to compare multiple supervised machine learning models for breast cancer classification.
+            </p>
+
+        </section>
+
+        <!-- METHODS -->
+        <section id="methods">
+
+            <h2>Methods</h2>
+
+            <h3>Dataset Description</h3>
+
+            <p>
+                The dataset consists of 569 samples with 30 numerical biomedical features.
+            </p>
+<div class="float-image">
+
+                <img src="https://t4.ftcdn.net/jpg/01/23/93/29/360_F_123932972_Zjf03PEPrh8VCnzon7eya9127NfE6VrV.jpg"
+                    alt="Biomedical Research">
+
+                <p class="caption">
+                    Figure 2: Computational biomedical research
+                </p>
+
+            </div>
+            <h3>Data Preprocessing</h3>
+
+            <p>
+                Feature scaling and standardization were applied before model training.
+            </p>
+
+            <h3>Feature Reduction</h3>
+
+            <p>
+                PCA was used to reduce redundancy and improve computational efficiency.
+            </p>
+
+            <h3>Machine Learning Models</h3>
+
+            <ul>
+                <li><strong>Logistic Regression</strong></li>
+                <li><strong>Random Forest</strong></li>
+                <li><strong>Support Vector Machine (SVM)</strong></li>
+            </ul>
+
+            <h3>Evaluation Metrics</h3>
+
+            <p>
+                Models were evaluated using accuracy, precision, recall, F1-score, and ROC-AUC.
+            </p>
+
+        </section>
+
+        <!-- RESULTS -->
+        <section id="results">
+
+            <h2>Results</h2>
+
+            <h3>Feature Correlation Analysis</h3>
+
+            <p>
+                Strong correlations were observed between several biomedical features.
+            </p>
+
+            <img src="../results/correlation_heatmap.png"
+                alt="Correlation Heatmap">
+
+            <h3>PCA Projection</h3>
+
+            <p>
+                PCA revealed that a reduced number of components preserved most dataset variance.
+            </p>
+
+            <img src="../results/pca_projection.png"
+                alt="PCA Projection">
+
+            <h3>Model Accuracy Comparison</h3>
+
+            <img src="../results/model_accuracy_comparison.png"
+                alt="Model Accuracy Comparison">
+
+            <h3>ROC Curve Analysis</h3>
+
+            <img src="../results/roc_curves.png"
+                alt="ROC Curves">
+
+        </section>
+
+        <!-- DISCUSSION -->
+        <section id="discussion">
+
+            <h2>Discussion</h2>
+
+            <p>
+                The results demonstrate that machine learning models can effectively classify breast cancer cases.
+            </p>
+
+            <p>
+                SVM achieved the highest performance due to its strong decision boundary optimization capabilities.
+            </p>
+
+            <div class="float-image">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxhCOvAAGiPtQOIJtjjdsPeyPWGhX4M8i5g&s"
+                    alt="AI Biomedical Analysis">
+
+                <p class="caption">
+                    Figure 3: Machine learning and biomedical analysis visualization
+                </p>
+
+            </div>
+
+            <p>
+                Random Forest also demonstrated strong performance through ensemble learning.
+            </p>
+
+            <p>
+                Logistic Regression provided a strong interpretable baseline model.
+            </p>
+
+            <p>
+                PCA highlighted redundancy in the feature space while preserving predictive performance.
+            </p>
+
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+
+            <h2>Conclusion</h2>
+
+            <div class="float-image">
+
+                <img src="https://t4.ftcdn.net/jpg/01/23/93/29/360_F_123932972_Zjf03PEPrh8VCnzon7eya9127NfE6VrV.jpg"
+                    alt="AI Healthcare Illustration">
+
+                <p class="caption">
+                    Figure 4: Artificial intelligence and biomedical healthcare systems
+                </p>
+
+            </div>
+
+            <p>
+                This study demonstrated the effectiveness of machine learning techniques for breast cancer classification.
+            </p>
+
+            <p>
+                SVM showed the strongest overall performance, followed closely by Random Forest.
+            </p>
+
+            <p>
+                PCA improved efficiency while preserving classification accuracy.
+            </p>
+
+            <h3>Future Work</h3>
+
+            <p>
+                Future research may explore deep learning methods and larger biomedical datasets.
+            </p>
+
+        </section>
+
+        <!-- REFERENCES -->
+        <section id="references">
+
+            <h2>Acknowledgments & References</h2>
+
+            
+
+            <p>
+                This study demonstrates the growing role of machine learning in biomedical diagnostics.
+            </p>
+
+            <h3>Acknowledgments</h3>
+
+            <p>
+                The author acknowledges the open-source scientific Python community.
+            </p>
+
+            <h3>Technologies Used</h3>
+
+            <ul>
+                <li>Python</li>
+                <li>scikit-learn</li>
+                <li>pandas</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+            </ul>
+
+            <h3>References</h3>
+
+            <ul>
+                <li>Breast Cancer Wisconsin Dataset</li>
+                <li>scikit-learn Documentation</li>
+                <li>PCA Research Papers</li>
+            </ul>
+
+            <div class="final-note">
+                End of Research Study
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    
+
+</body>
+
+</html>
